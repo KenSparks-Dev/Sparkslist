@@ -6,8 +6,10 @@ Essentially what we want in lay mans terms is for a user to enter a line of text
 
 */ 
 const id = Math.floor(Math.random() * 9999 );
-const title = document.getElementsByClassName("list-item-title");
+let title = document.getElementsByClassName("list-item-title");
 const date = new Date();
+let isComplete = document.getElementsByTagName("isComplete");
+
 
 console.log(date)
 
