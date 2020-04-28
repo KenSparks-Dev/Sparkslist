@@ -5,12 +5,14 @@ Essentially what we want in lay mans terms is for a user to enter a line of text
 
 
 */ 
-const id = Math.floor(Math.random() * 9999 );
 let title = document.getElementsByClassName("list-item-title");
 let isComplete = document.getElementsByTagName("isComplete");
 
 function createToDo(){
 let date = new Date();
 let createdAt = date.toISOString();
+let id = Math.floor(Math.random() * 9999);
 document.getElementById("createdAt").innerHTML = date;
+document.getElementById("id").innerHTML = id;
 }
+
