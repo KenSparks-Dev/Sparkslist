@@ -7,15 +7,10 @@ Essentially what we want in lay mans terms is for a user to enter a line of text
 */ 
 const id = Math.floor(Math.random() * 9999 );
 let title = document.getElementsByClassName("list-item-title");
-const date = new Date();
 let isComplete = document.getElementsByTagName("isComplete");
 
-
-console.log(date)
-
-
-function createTodo(){
-let newItem;
- newItem.prompt();
-  return prompt()
+function createToDo(){
+let date = new Date();
+let createdAt = date.toISOString();
+document.getElementById("createdAt").innerHTML = date;
 }
