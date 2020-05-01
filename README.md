@@ -20,7 +20,7 @@ let todos = [
 function createTodo("parameter go here") {
 ​
 }
-​
+​//Check color game in 
 console.log(createTodo("argument go here"))
 console.log(todos)
 ```
@@ -38,7 +38,6 @@ Your first assignment in creating a todo list is to create a todo (function).
     isComplete: false
   }
 ```
-​
 Notes:
 A todo item consists of a few core items:
 1. An ID/unique identifier. You'll use this to know which todo to delete/update and having a unique identifier also helps the backend know which item in the database needs to be modified. For this project, the `id` you create should be a random set of numbers.
