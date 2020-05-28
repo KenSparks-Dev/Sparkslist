@@ -51,3 +51,34 @@ A todo item consists of a few core items:
 5. A `lastUpdated` date. This will be a date that you generate whenever a user UPDATES an existing todo item. But when you create the todo initially, you should set it using whatever you set your `createdAt` with.
 ​
 You will come across blockers. Do your best and feel free to contact me when you hit them.
+
+Update todo function
+take an id(unique identifier). Passing the id of a 
+
+function updateTodo(id, title, isComplete){
+// Find todo in array with the correct id.
+//Return updated todo with new title and new isComplete value.
+}
+
+updateTodo(1231, "Find a bday present for Tim", true)// Should return updated todo
+console.log(todos)
+console.log(updateTodo)
+
+// https://tinyurl.com/o4xk6br
+
+
+
+// updateTodo Function
+- updateTodo should accept three arguments, an ID (that is used to find the existing todo in the todos array), an updated title, and a boolean on the task is completed)
+- it should return the updated todo object but also include the properties + values of the old todo object for the  properties/values that have not been updated/
+- lastUpdated should be given a new date for when this todo has been updated
+- it should update the global todos array for the item that got updated
+
+// expected return:
+{
+	id: 2345,
+		title: 'build a bike',
+			createdAt: '2019-04-17T23:29:57.350Z',
+				lastUpdated: '2020-05-24T17:06:47.074Z',
+					isComplete: true
+}
