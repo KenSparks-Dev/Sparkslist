@@ -67,4 +67,6 @@ function updateTodo(id, title, isComplete) {
 	}
 }
 // usage
-console.log(updateTodo(2537, "Fight A Robot!", true)) 
+console.log(updateTodo(1231, "Fight A Robot!", true)) 
+
+console.log(todos)
