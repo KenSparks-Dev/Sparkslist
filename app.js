@@ -28,28 +28,23 @@ function createToDo(title) {
 		isComplete: false
 	};
 	todos.push(todo);
-	for (i = 0; i < todos.length; i++) {
-		if (title === true) {
-			createToDo = true;
-		}
-	}
 	return todos;
 }
 
 // console.log(createToDo('build a bike'));
 // console.log(createToDo('shop for groceries'));
 
-function updateToDo(id, title, lastUpdated = new Date().toISOString(), isComplete = false) {
-	const oldToDo = todos.filter((todo) => todo.id == id);
-	console.log(oldToDo);
-	return {
-		id,
-		title,
-		lastUpdated,
-		isComplete
-	};
-}
-updateToDo();
+// function updateToDo(id, title, lastUpdated = new Date().toISOString(), isComplete = false) {
+// 	const oldToDo = todos.filter((todo) => todo.id == id);
+// 	console.log(oldToDo);
+// 	return {
+// 		id,
+// 		title,
+// 		lastUpdated,
+// 		isComplete
+// 	};
+// }
+// console.log(updateToDo(1231, "pick up groceries", lastUpdated = new Date(), true));
 /* 
 // let title = document.getElementsByClassName("list-item-title");
 // let isComplete = document.getElementsByTagName("isComplete"); */
@@ -72,4 +67,4 @@ function updateTodo(id, title, isComplete) {
 	}
 }
 // usage
-console.log(updateTodo(2345, "build a bike", true)) 
+console.log(updateTodo(2537, "Fight A Robot!", true)) 
