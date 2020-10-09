@@ -1,72 +1,100 @@
 let todos = [
-	{
-		id: 1231,
-		title: 'Take out the trash',
-		createdAt: '2020-04-17T23:29:57.350Z',
-		lastUpdated: '2020-04-17T23:29:57.350Z',
-		isComplete: false
-	},
-	{
-		id: 2345,
-		title: 'Find a bday present for Tim',
-		createdAt: '2019-04-17T23:29:57.350Z',
-		lastUpdated: '2019-04-17T23:29:57.350Z',
-		isComplete: false
-	}
+  {
+    id: 1231,
+    title: "Take out the trash",
+    createdAt: "2020-04-17T23:29:57.350Z",
+    lastUpdated: "2020-04-17T23:29:57.350Z",
+    isComplete: false,
+  },
+  {
+    id: 2345,
+    title: "Find a bday present for Tim",
+    createdAt: "2019-04-17T23:29:57.350Z",
+    lastUpdated: "2019-04-17T23:29:57.350Z",
+    isComplete: false,
+  },
 ];
 
-function createToDo(title) {
-	let date = new Date();
-	let createdAt = date.toISOString();
-	let id = Math.floor(Math.random() * 9999);
-	let lastUpdated = createdAt;
-	const todo = {
-		id,
-		title,
-		createdAt,
-		lastUpdated,
-		isComplete: false
-	};
-	todos.push(todo);
-	return todos;
+function createToDo(name) {
+  let date = new Date();
+  let createdAt = date.toISOString();
+  const todo = {
+    id: Math.floor(Math.random() * 9999),
+    title: name,
+    createdAt: createdAt,
+    lastUpdated: createdAt,
+    isComplete: false,
+  };
+  todos.push(todo);
+  return todos;
 }
 
-// console.log(createToDo('build a bike'));
-// console.log(createToDo('shop for groceries'));
+// .map, .filter, .find
 
-// function updateToDo(id, title, lastUpdated = new Date().toISOString(), isComplete = false) {
-// 	const oldToDo = todos.filter((todo) => todo.id == id);
-// 	console.log(oldToDo);
-// 	return {
-// 		id,
-// 		title,
-// 		lastUpdated,
-// 		isComplete
-// 	};
+// function updateTodo(id, title, isComplete) {
+//   const originalTodos = todos.filter((item) => {
+//     return id == item.id;
+//   });
+//   const todoWithoutArray = originalTodos[0];
+
+//   const uneditedTodos = todos.filter((item) => {
+//     return id !== item.id;
+//   });
+
+//   let updatedDateObject = new Date();
+//   let updatedDateString = updatedDateObject.toISOString();
+
+//   todos = [
+//     ...uneditedTodos,
+//     {
+//       id: todoWithoutArray.id,
+//       title: title,
+//       createdAt: todoWithoutArray.createdAt,
+//       lastUpdated: updatedDateString,
+//       isComplete: isComplete,
+//     },
+//   ];
+
+//   return todos;
 // }
-// console.log(updateToDo(1231, "pick up groceries", lastUpdated = new Date(), true));
-/* 
-// let title = document.getElementsByClassName("list-item-title");
-// let isComplete = document.getElementsByTagName("isComplete"); */
-
-// document.getElementById("createdAt").innerHTML = date;
-// document.getElementById("id").innerHTML = id;
-
-//send pr of branch
 
 function updateTodo(id, title, isComplete) {
-		const keptData = todos.find(todo => this.createdAt)
-		let date = new Date();
-		let lastUpdated = date.toISOString();
-	return uTodo = {
-		updatedId: id,
-		newTitle: title ,
-		originalDate: keptData,
-		lastUpdated: lastUpdated,
-		newIsComplete: isComplete
-	}
-}
-// usage
-console.log(updateTodo(1231, "Fight A Robot!", true)) 
+  const originalTodo = todos.find((item) => {
+    return id == item.id;
+  });
 
-console.log(todos)
+  const uneditedTodos = todos.filter((item) => {
+    return id !== item.id;
+  });
+
+  let updatedDateObject = new Date();
+  let updatedDateString = updatedDateObject.toISOString();
+
+  todos = [
+    ...uneditedTodos,
+    {
+      id: originalTodo.id,
+      title: title,
+      createdAt: originalTodo.createdAt,
+      lastUpdated: updatedDateString,
+      isComplete: isComplete,
+    },
+  ];
+
+  console.log(todos);
+  return todos;
+}
+
+// updateTodo(1231, "Fight A Robot!", true);
+
+function deleteTodo(id) {
+  const remainingTodos = todos.filter((item) => {
+    return id !== item.id;
+  });
+
+  todos = remainingTodos;
+  return todos;
+}
+
+console.log(deleteTodo(2345));
+// console.log(result);

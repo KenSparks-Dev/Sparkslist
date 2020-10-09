@@ -82,3 +82,7 @@ console.log(updateTodo)
 				lastUpdated: '2020-05-24T17:06:47.074Z',
 					isComplete: true
 }
+
+Delete Function: 
+Delete a single item at any given time and return the new array.
+use id to determine the id that needs to be removed.
